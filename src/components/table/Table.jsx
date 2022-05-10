@@ -11,52 +11,29 @@ const List = () => {
   const rows = [
     {
       id: 1143155,
-      product: "Bitcoin",
-      img: "https://m.media-amazon.com/images/I/81bc8mA3nKL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "John Smith",
-      date: "1 March",
-      amount: 785,
+      seller: "@mikesmit",
+      buyer: "@adebarn",
+      date: "2022-02-03",
+      amount: 0.009,
       method: " Bank Transfer",
-      status: "Approved",
+      status: "Completed",
     },
     {
       id: 2235235,
-      product: "Ethereum",
-      img: "https://m.media-amazon.com/images/I/31JaiPXYI8L._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Michael Doe",
-      date: "1 March",
-      amount: 900,
-      method: "Wallet",
+      seller: "@estherw",
+      buyer: "@chimaoge",
+      date: "2022-02-03",
+      amount: 0.000976,
+      method: "Airtel Pay",
       status: "Pending",
     },
     {
       id: 2342353,
-      product: "Tron",
-      img: "https://m.media-amazon.com/images/I/71kr3WAj1FL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "John Smith",
-      date: "1 March",
-      amount: 35,
+      seller: "@trom",
+      buyer: "@johnfg",
+      date: "2022-02-03",
+      amount: 0.00374,
       method: "Wallet",
-      status: "Pending",
-    },
-    {
-      id: 2357741,
-      product: "Ripple",
-      img: "https://m.media-amazon.com/images/I/71wF7YDIQkL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Jane Smith",
-      date: "1 March",
-      amount: 920,
-      method: "Wallet",
-      status: "Approved",
-    },
-    {
-      id: 2342355,
-      product: "Bitcoin",
-      img: "https://m.media-amazon.com/images/I/81hH5vK-MCL._AC_UY327_FMwebp_QL65_.jpg",
-      customer: "Harold Carol",
-      date: "1 March",
-      amount: 2000,
-      method: "Bank Transfer",
       status: "Pending",
     },
   ];
@@ -65,11 +42,11 @@ const List = () => {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell className="tableCell">Tracking ID</TableCell>
-            <TableCell className="tableCell">Product</TableCell>
-            <TableCell className="tableCell">Customer</TableCell>
+            <TableCell className="tableCell"> ID</TableCell>
+            <TableCell className="tableCell">Seller</TableCell>
+            <TableCell className="tableCell">Buyer</TableCell>
             <TableCell className="tableCell">Date</TableCell>
-            <TableCell className="tableCell">Amount</TableCell>
+            <TableCell className="tableCell">Amount (BTC)</TableCell>
             <TableCell className="tableCell">Payment Method</TableCell>
             <TableCell className="tableCell">Status</TableCell>
           </TableRow>
@@ -80,11 +57,10 @@ const List = () => {
               <TableCell className="tableCell">{row.id}</TableCell>
               <TableCell className="tableCell">
                 <div className="cellWrapper">
-                  <img src={row.img} alt="" className="image" />
-                  {row.product}
+                  {row.seller}
                 </div>
               </TableCell>
-              <TableCell className="tableCell">{row.customer}</TableCell>
+              <TableCell className="tableCell">{row.buyer}</TableCell>
               <TableCell className="tableCell">{row.date}</TableCell>
               <TableCell className="tableCell">{row.amount}</TableCell>
               <TableCell className="tableCell">{row.method}</TableCell>
